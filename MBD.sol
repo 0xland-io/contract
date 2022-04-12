@@ -1,4 +1,4 @@
-// contracts/XLD.sol
+// contracts/MBD.sol
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
@@ -192,11 +192,11 @@ abstract contract Ownable is Context {
     }
 }
 
-contract XLD is ERC20, Ownable {
+contract MBD is ERC20, Ownable {
     uint256 private immutable _cap;
     mapping (address => bool) public _minters;
 
-    constructor(uint256 cap_) ERC20("0xland", "XLD") {
+    constructor(uint256 cap_) ERC20("Metabridge", "MBD") {
         require(cap_ > 0, "cap is 0");
         _cap = cap_;
         _minters[msg.sender] = true;
